@@ -1,0 +1,41 @@
+# =====================================================================
+#  PII FIREWALL — nothing personal ever gets committed.
+#  Pattern: *.example.* files ship (blank templates). Onboarding copies
+#  them to their LIVE names below, which are ignored forever. Your real
+#  contacts, sends, and config can never be pushed.
+# =====================================================================
+
+# --- Filled-in config + credentials (NEVER commit) ---
+config.json
+.env
+*.local
+
+# --- Live working data (each rep's own; the .example versions ship, these don't) ---
+MASTER_SENT_LIST.csv
+data/target-accounts.csv
+data/suppression-list.csv
+memory/do-not-contact.md
+memory/warm-leads.md
+memory/call-log.md
+memory/pipeline-state.md
+memory/contact-lifecycle.md
+memory/daily-log.md
+memory/incidents.md
+
+# --- Generated from templates (produced during onboarding) ---
+CLAUDE.md
+AGENTS.md
+
+# --- Local runtime / generated artifacts ---
+analytics/*.db
+analytics/dashboards/
+batches/active/*
+!batches/active/.gitkeep
+sequences/*/roster*.csv
+sequences/*/*-drafts*.md
+
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
